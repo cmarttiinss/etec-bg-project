@@ -1,0 +1,110 @@
+/* Reset básico e tipografia */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+form {
+    background-color: #111111;
+    border: 1px solid #333333;
+    border-radius: 12px;
+    padding: 24px 32px;
+    width: 100%;
+    max-width: 520px;
+    box-shadow: 0 8px 24px rgba(255, 255, 255, 0.05);
+}
+
+form#Equação {
+    margin-bottom: 20px;
+}
+#Equação > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: nowrap;
+}
+#Equação label {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffffff;
+    white-space: nowrap;
+}
+input[type="text"] {
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid #444444;
+    border-radius: 6px;
+    padding: 10px 12px;
+    font-size: 1rem;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+#valorA, #valorB, #valorC {
+    width: 75px;
+}
+input[type="text"]:focus {
+    outline: none;
+    border-color: #ffffff;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+}
+#Botões > div {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+input[readonly] {
+    background-color: #1a1a1a;
+    color: #888888;
+    border-color: #222222;
+    cursor: default;
+    width: 100%;
+}
+
+input[readonly]:focus {
+    border-color: #222222;
+    box-shadow: none;
+}
+
+button {
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 12px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+#calcular {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #ffffff;
+}
+
+#calcular:hover {
+    background-color: #cccccc;
+    border-color: #cccccc;
+}
+
+#limpar {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #444444;
+}
+
+#limpar:hover {
+    background-color: #222222;
+    border-color: #ffffff;
+}

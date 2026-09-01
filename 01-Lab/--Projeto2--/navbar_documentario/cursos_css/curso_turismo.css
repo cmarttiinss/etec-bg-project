@@ -1,0 +1,99 @@
+/* =============================================
+   CSS - Curso: Guia de Turismo (Técnico Online)
+   Arquivo: curso_turismo.css
+   ============================================= */
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #ffffff;
+    color: #1a1a1a;
+    padding-top: 70px;
+    line-height: 1.7;
+}
+
+/* Header / Navbar */
+header {
+    /* Estilize o cabeçalho aqui */
+}
+
+header h1 {
+    /* Estilize o título do header */
+}
+
+.logo {
+    /* Estilize o container do logo */
+}
+
+.logo img {
+    /* Estilize a imagem do logo */
+}
+
+/* Layout Principal */
+.container {
+    /* Estilize o container principal */
+}
+
+.full-width {
+    /* Estilize o conteúdo full-width */
+}
+
+/* Títulos */
+h2 {
+    /* Estilize o título principal da página */
+}
+
+h3 {
+    /* Estilize os subtítulos das seções */
+}
+
+/* Descrição / Modalidade */
+.description {
+    /* Estilize o texto da modalidade */
+}
+
+/* Seções de Informação do Curso */
+.course-info {
+    /* Estilize cada seção de informação */
+}
+
+.course-info p {
+    /* Estilize os parágrafos das seções */
+}
+
+/* Listas */
+ul {
+    /* Estilize as listas */
+}
+
+li {
+    /* Estilize os itens da lista */
+}
+
+/* Link Voltar */
+.back-link {
+    /* Estilize o container do link voltar */
+}
+
+.back-link a {
+    /* Estilize o botão/link voltar */
+}
+
+.back-link a:hover {
+    /* Estilize o hover do botão voltar */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    /* Estilos para telas menores */
+}

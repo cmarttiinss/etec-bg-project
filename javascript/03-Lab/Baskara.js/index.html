@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baskara</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Adicionado defer para carregar o JS apenas após a leitura do HTML -->
+    <script src="script.js" defer></script> 
+</head>
+<body>
+    <!-- Todos os elementos unificados em um unico formulário -->
+    <form id="equacao">
+        <div>
+            <input type="text" id="valorA" placeholder="Valor A">
+            <label id="label1">x² + </label>
+            <input type="text" id="valorB" placeholder="Valor B">
+            <label id="label2">x + </label>
+            <input type="text" id="valorC" placeholder="Valor C">
+            <label id="label3">= 0 </label><br><br>
+        </div>
+
+        <div> 
+            <input type="text" id="resudelta" placeholder="delta" readonly><br><br>
+            <input type="text" id="raiz1" placeholder="1° Raiz" readonly><br>
+            <input type="text" id="raiz2" placeholder="2° Raiz" readonly><br><br>
+            <button type="reset" id="limpar">Limpar</button>
+            <button type="button" id="calcular" data-operacao="calc">Calcular</button>
+        </div>
+    </form>
+</body>
+</html>

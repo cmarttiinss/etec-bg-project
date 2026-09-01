@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #ffffff;
+    color: #1a1a1a;
+    padding-top: 70px;
+    line-height: 1.7;
+}
+
+/* Header style identical to aula3.html */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 12px 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header h1 {
+    color: #ffffff;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+}
+
+/* Layout Principal */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* Coluna Esquerda */
+.left-column {
+    flex: 0 0 320px; /* Largura fixa */
+    background-color: #ffffff;
+    border: 1px solid #eeeeee;
+    padding-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.school-image {
+    width: 100%;
+    background-color: #f5f5f5;
+    border-bottom: 3px solid #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.school-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.info-block {
+    padding: 15px 20px;
+    transition: opacity 0.3s ease;
+    border-radius: 6px;
+    margin: 5px;
+}
+
+.info-block:hover {
+    opacity: 0.7; /* Fica levemente transparente como pedido */
+}
+
+.info-block h3 {
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: none;
+    padding-bottom: 0;
+    font-size: 16px;
+    margin-top: 0;
+}
+
+.info-block p, .info-block a {
+    font-size: 13px;
+    color: #444444;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+.info-block a:hover {
+    text-decoration: underline;
+    color: #000000;
+}
+
+.btn-arquivo {
+    display: block;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #cccccc;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    transition: all 0.2s;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.btn-arquivo:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.info-block button {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.info-block button a {
+    color: #000000;
+    font-weight: 600;
+    font-size: 13px;
+    display: block;
+}
+
+.info-block button:hover {
+    background-color: #000000;
+    border-color: #000000;
+}
+
+.info-block button:hover a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Coluna Direita */
+.right-column {
+    flex: 1;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #666666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+h1, h2, h3 {
+    text-align: left;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 35px 0 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #000000;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #1a1a1a;
+}
+
+/* Ocultar a tag hr pois a borda inferior do h2 já faz esse papel */
+.title-divider {
+    display: none;
+}
+
+.history-text {
+    font-size: 15px;
+    color: #333333;
+    margin: 8px 0 40px;
+}
+
+.course-group {
+    margin-bottom: 35px;
+}
+
+.course-group h4 {
+    font-size: 16px;
+    color: #333333;
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+ul {
+    margin: 10px 0 10px 20px;
+    list-style: none;
+}
+
+li {
+    padding: 8px 0;
+    font-size: 15px;
+    color: #333333;
+    border-bottom: 1px solid #eeeeee;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .left-column {
+        flex: none;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px 15px;
+    }
+
+    header h1 {
+        font-size: 14px;
+    }
+
+    .right-column h2 {
+        font-size: 24px;
+    }
+    
+    .section-title {
+        font-size: 20px;
+    }
+}

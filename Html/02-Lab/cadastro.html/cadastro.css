@@ -1,0 +1,267 @@
+/* ── Reset ── */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ── Cabeçalho ── */
+.Topo {
+    background-color: #000000;
+    padding: 1.75rem 1.5rem;
+    text-align: center;
+}
+
+.topo_cadastro {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #ffffff;
+}
+
+/* ── Formulário ── */
+form {
+    max-width: 400px;
+    width: 100%;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+    flex: 1;
+}
+
+.form-group {
+    margin-bottom: 2rem;
+}
+
+/* ── Labels ── */
+label {
+    display: block;
+    font-size: 10px;
+    color: #555555;
+    margin-bottom: 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* ── Campos de texto ── */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="date"] {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 1px solid #dddddd;
+    border-radius: 0;
+    font-size: 14px;
+    color: #000000;
+    background: transparent;
+    outline: none;
+    transition: border-color 0.25s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus {
+    border-bottom: 1.5px solid #000000;
+}
+
+/* ── Select ── */
+select {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 1px solid #dddddd;
+    border-radius: 0;
+    font-size: 14px;
+    color: #000000;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cpath d='M1 3.5l4 4 4-4' stroke='%23000' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 4px center;
+    transition: border-color 0.25s ease;
+}
+
+select:focus {
+    border-bottom: 1.5px solid #000000;
+}
+
+select option {
+    background: #ffffff;
+    color: #000000;
+}
+
+/* ── Título dos grupos de radio/checkbox ── */
+.form-group p {
+    font-size: 10px;
+    color: #555555;
+    margin-bottom: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* ── Radio buttons ── */
+.radio-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.radio-group label {
+    display: inline;
+    font-size: 13px;
+    color: #333333;
+    text-transform: none;
+    letter-spacing: 0;
+    font-weight: 400;
+    margin-right: 16px;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    accent-color: #000000;
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+}
+
+/* ── Checkboxes ── */
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.checkbox-group label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: #333333;
+    text-transform: none;
+    letter-spacing: 0;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    accent-color: #000000;
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+}
+
+/* ── Botão ── */
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background: #000000;
+    color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 0;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+    margin-top: 1rem;
+}
+
+button[type="submit"]:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+button[type="submit"]:active {
+    opacity: 0.8;
+}
+
+/* ── Rodapé ── */
+.rodape {
+    border-top: 1px solid #222222;
+    background: #000000;
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    align-items: start;
+    gap: 3rem;
+    padding: 3rem 2rem;
+    font-size: 12px;
+    color: #888888;
+    margin-top: auto;
+}
+
+.rodape_logo img {
+    width: 56px;
+    filter: invert(100%);
+    opacity: 0.9;
+}
+
+.rodape_info p {
+    margin-bottom: 6px;
+    line-height: 1.7;
+}
+
+.rodape_links,
+.rodape_links2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rodape_links2 {
+    padding-left: 1rem;
+}
+
+.rodape a {
+    color: #888888;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+}
+
+.rodape a:hover {
+    color: #ffffff;
+}
+
+/* ── Responsividade ── */
+@media (max-width: 768px) {
+    .rodape {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+        padding: 2rem 1.5rem;
+    }
+
+    .rodape_links,
+    .rodape_links2 {
+        align-items: center;
+        padding-left: 0;
+    }
+
+    form {
+        margin: 2rem auto;
+    }
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Aula HTML/CSS </title>
+    <link rel="stylesheet" type="text/css" href="aula3.CSS">
+</head>
+
+<body>
+    <input type="checkbox" id="menu-toggle"/>
+    <header>
+        <label for="menu-toggle" class="menu-btn">&#9776;</label>
+        <H1>-Documentario Pessoal do Aluno-</H1>
+        <div class="logo">
+            <img src="img/imagembasilide2s.png" alt="Logo Basilides de Godoy"/>
+        </div>
+    </header>
+    <div class="sidebar">
+        <label for="menu-toggle" class="close-btn">&times;</label>
+        <div class="sidebar-header">
+            <img src="img/etec_logo_minimalist.png" alt="Logo Minha ETEC"/>
+            <span>Minha ETEC</span>
+        </div>
+        <a href="#sobre"><img class="nav-icon" src="img/icon_sobre.png" alt="Sobre"/> Sobre</a>
+        <a href="#professores"><img class="nav-icon" src="img/icon_professores.png" alt="Professores"/> Professores</a>
+        <a href="#curso"><img class="nav-icon" src="img/icon_curso.png" alt="O Curso"/> O Curso</a>
+        <a href="#materias"><img class="nav-icon" src="img/icon_materias.png" alt="Matérias"/> Matérias</a>
+        <a href="#contato"><img class="nav-icon" src="img/icon_contato.png" alt="Contato"/> Contato</a>
+        <a href="navbar_documentario/colegio.html"><img class="nav-icon" src="img/icon_visitar.svg" alt="Visitar o Colegio"/> Visitar o Colegio</a>
+        <a href="navbar_documentario/cursos.html"><img class="nav-icon" src="img/icon_tecnicos.svg" alt="Cursos tecnicos"/> Cursos tecnicos</a>
+    </div>
+    <label for="menu-toggle" class="overlay"></label>
+    <h2 id="sobre">-Sobre o Aluno:</h2>
+    <p> Aluno: Cauã Martins do Nascimento </p>
+    <p> Colegio: Etec Basilides de Godoy <img src="img/imagembasilide2s.png"/> </p> 
+    <p> Curso: Desenvolvimento de Sistemas </p> 
+    <H3 id="professores">-Professores do Curso: </H3>
+    <ul> 
+        <li> Enildo: Python <img src="img/imagemPYTHON.png"/> </li> 
+        <li> Sandra: Html/Css<img src="img/imagemHTML.png"/> <img src="img/imagemCSS.png"/> </li>
+        <li> Eliene: Banco de dados/Sql <img src="img/imagemSQL.png"/> </li>
+        <li> Fabrizio: Sistemas Embarcados/C++ <img src="img/imagemC++.png"/> </li>
+    </ul>
+
+    <H4 id="curso">-Curso ADS Etec Basilides de Godoy: </H4>
+    <p>O curso de Análise e Desenvolvimento de Sistemas (ADS) tem como objetivo formar profissionais
+    capacitados para atuar na área de tecnologia da informação, desenvolvendo soluções computacionais que
+    atendam às necessidades da sociedade e do mercado. Ao longo do curso, os estudantes terão contato com
+    conceitos fundamentais de programação, lógica computacional, banco de dados e engenharia de software,
+    além de práticas que estimulam o raciocínio lógico, a criatividade e o trabalho em equipe. Dessa forma,
+    o curso contribui para a formação de indivíduos críticos e preparados para os desafios do mundo digital. </p>
+        
+    <p>Na disciplina de Introdução ao curso de Análise e Desenvolvimento de Sistemas, iremos aprender os conceitos básicos que fundamentam a área de tecnologia, como o funcionamento dos computadores,
+    noções iniciais de lógica de programação e algoritmos. Também serão abordados temas como a importância
+    dos sistemas de informação na sociedade, as principais áreas de atuação do profissional de ADS e boas
+    práticas no desenvolvimento de software. Essa etapa inicial é essencial para construir uma base sólida de
+    conhecimento, facilitando o aprendizado dos conteúdos mais avançados ao longo do curso. </p> 
+        
+    <H2 id="materias">-Materiais do Curso: </H2>
+    <p> Materiais que seram necessarios ter em seu computador para o curso que iremos fazer:</p>
+    <ul>
+        <li> Html <img src="img/imagemHTML.png"/> </li>
+        <li> Python <img src="img/imagemPYTHON.png"/> </li> 
+        <li> Css <img src="img/imagemCSS.png"/> </li>
+        <li> SQL <img src="img/imagemSQL.png"/> </li>
+        <li> C++ <img src="img/imagemC++.png"/> </li>
+    </ul>
+
+    <hr>
+
+    <footer id="contato">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p>Aluno: Cauã Martins</p>
+                <p>E-mail: <a href="mailto:kakamartinsdonascimento@gmail.com">kakamartinsdonascimento@gmail.com</a></p>
+                <p>Colégio: ETEC Basilides de Godoy</p>
+                <p>Endereço: São Paulo - SP</p>
+            </div>
+            <div class="footer-section">
+                <h3>Navegação</h3>
+                <p><a href="#sobre">Sobre o Aluno </a></p>
+                <p><a href="#professores">Professores</a></p>
+                <p><a href="#curso">Curso </a></p>
+                <p><a href="#materias">Materiais do Curso</a></p>
+
+            </div>
+            <div class="footer-section">
+                <h3>Sobre o Curso</h3>
+                <p>Curso: Desenvolvimento de Sistemas</p>
+                <p>Modalidade: Ensino Técnico</p>
+                <p>Período: Modular Tarde</p>
+                <p>Duração: 1 ano e 6 meses</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 - Cauã Martins | Todos os direitos reservados</p>
+        </div>
+    </footer>
+    <script>
+        var links = document.querySelectorAll('.sidebar a');
+        var checkbox = document.getElementById('menu-toggle');
+        for (var i = 0; i < links.length; i++) {
+            links[i].addEventListener('click', function() {
+                checkbox.checked = false;
+            });
+        }
+    </script>
+
+</body>
+</html>

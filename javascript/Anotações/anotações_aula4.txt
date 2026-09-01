@@ -1,0 +1,28 @@
+PWII - 31/08 /2026
+---
+
+Objeto Date 
+- É um componente, do JavaScript que, através dele, podemos acessar dados do sistema
+operacional realtivo a data, hora e da da semana. instanciando este objeto e através 
+dos métodos que são disponibilizados, acessamos estas informações 
+
+Sintaxe: 
+- Var variável = new.date();
+  |               |
+Pode ser        cláusula do JS 
+let ou const    para instanciar o objeto
+---
+
+Em seguida, todos os métodos deste objeto serão referenciados 
+pela variável designada...
+
+Exemplos: 
+- variavel.getDate() => dias do mês de 1 até 31
+- variavel.getMonth() => meses do ano de 0 até 11
+- variavel.getFullYear() => ano com 4 dígitos (com 2 dígitos referenciamos ".getYear")
+- variavel.getDay() => dia da semana de 0 até 6
+- variavel.getHour() => hora
+- variavel.getMinute() => minuto
+- variavel.getSecond() => segundo
+
+Dontpad: PWII-2ADS-2SEM2026

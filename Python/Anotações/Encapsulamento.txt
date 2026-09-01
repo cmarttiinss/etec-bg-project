@@ -1,0 +1,226 @@
+==========================================
+🔐 ENCAPSULAMENTO
+==========================================
+
+📝 RESUMO RÁPIDO:
+=================
+
+Encapsulamento = Agrupar dados + controlar acesso
+Proteger dados sensíveis e evitar modificações incorretas
+
+---
+
+1️⃣ NÍVEIS DE ACESSO
+===================
+
+Python oferece 3 níveis de privacidade:
+
+Público (sem prefixo):
+  self.nome = "João"
+  ✅ Acessível de qualquer lugar
+  ✅ Sem proteção
+
+Protegido (_):
+  self._dados = valor
+  ⚠️ Apenas na classe e subclasses (convenção)
+  ⚠️ Python não impede acesso
+
+Privado (__):
+  self.__senha = "123456"
+  🔒 Apenas dentro da classe
+  🔒 Python impede acesso direto
+
+---
+
+2️⃣ EXEMPLOS DE SINTAXE
+=======================
+
+❌ SEM ENCAPSULAMENTO:
+  class ContaSem:
+      def __init__(self, saldo):
+          self.saldo = saldo
+  
+  conta = ContaSem(1000)
+  conta.saldo = -999  # ❌ Inválido permitido!
+
+✅ COM ENCAPSULAMENTO:
+  class ContaCom:
+      def __init__(self, saldo):
+          self.__saldo = saldo
+      
+      def depositar(self, valor):
+          if valor > 0:
+              self.__saldo += valor
+      
+      def obter_saldo(self):
+          return self.__saldo
+  
+  conta = ContaCom(1000)
+  conta.depositar(500)     # ✅ Validação ocorre
+  # conta.__saldo = -999   # ❌ Erro!
+
+---
+
+3️⃣ POR QUE ENCAPSULAR?
+======================
+
+✓ PROTEÇÃO: Dados sensíveis não são expostos
+✓ VALIDAÇÃO: Controla entrada de dados
+✓ INTEGRIDADE: Mantém dados consistentes
+✓ FLEXIBILIDADE: Muda implementação sem quebrar código
+✓ SEGURANÇA: Esconde detalhes internos
+
+---
+
+4️⃣ GETTERS E SETTERS
+====================
+
+GET = Ler valor do atributo privado
+SET = Modificar valor do atributo privado (com validação)
+
+Exemplo:
+
+class Temperatura:
+    def __init__(self, celsius):
+        self.__celsius = celsius
+    
+    # GETTER - Ler
+    def obter_celsius(self):
+        return self.__celsius
+    
+    def obter_fahrenheit(self):
+        return (self.__celsius * 9/5) + 32
+    
+    # SETTER - Modificar com validação
+    def definir_celsius(self, valor):
+        if valor >= -273.15:  # Zero absoluto
+            self.__celsius = valor
+            return True
+        else:
+            print("Temperatura inválida!")
+            return False
+
+Uso:
+  temp = Temperatura(25)
+  print(temp.obter_celsius())    # 25
+  temp.definir_celsius(30)       # ✅ Válido
+  temp.definir_celsius(-300)     # ❌ Erro!
+
+---
+
+5️⃣ EXEMPLO PRÁTICO COMPLETO
+============================
+
+class Produto:
+    def __init__(self, nome, preco, estoque):
+        self.__nome = nome
+        self.__preco = preco
+        self.__estoque = estoque
+    
+    # GETTERS
+    def obter_nome(self):
+        return self.__nome
+    
+    def obter_preco(self):
+        return self.__preco
+    
+    def obter_estoque(self):
+        return self.__estoque
+    
+    # SETTERS
+    def definir_preco(self, novo_preco):
+        if novo_preco > 0:
+            self.__preco = novo_preco
+            return True
+        return False
+    
+    def adicionar_estoque(self, quantidade):
+        if quantidade > 0:
+            self.__estoque += quantidade
+            return True
+        return False
+    
+    def vender(self, quantidade):
+        if 0 < quantidade <= self.__estoque:
+            self.__estoque -= quantidade
+            return True
+        return False
+
+---
+
+6️⃣ COMPARAÇÃO
+=============
+
+ASPECTO              SEM ENC.       COM ENC.
+Segurança           Baixa          Alta
+Validação           Nenhuma        Sempre
+Integridade         Arriscada      Garantida
+Flexibilidade       Limitada       Máxima
+Modificações        Fácil quebrar  Seguro
+
+---
+
+7️⃣ BOAS PRÁTICAS
+=================
+
+✓ Começar com __ (privado por padrão)
+✓ Criar getters e setters quando necessário
+✓ Validar em todos os setters
+✓ Documentar o propósito do encapsulamento
+✓ Usar nomes claros: obter_X(), definir_X()
+✓ Proteger dados sensíveis
+
+---
+
+8️⃣ PROPRIEDADES (PYTHON AVANÇADO)
+==================================
+
+Use @property para simular atributos:
+
+class Pessoa:
+    def __init__(self, idade):
+        self.__idade = idade
+    
+    @property
+    def idade(self):
+        return self.__idade
+    
+    @idade.setter
+    def idade(self, valor):
+        if 0 <= valor <= 150:
+            self.__idade = valor
+
+Uso (mais natural):
+  pessoa = Pessoa(25)
+  print(pessoa.idade)    # Usa getter
+  pessoa.idade = 26      # Usa setter
+
+---
+
+9️⃣ ERROS COMUNS
+===============
+
+❌ Expor dados privados
+❌ Não validar em setters
+❌ Usar __ para tudo
+❌ Não documentar o motivo
+❌ Métodos sem propósito claro
+
+---
+
+🔟 RESUMO RÁPIDO
+=================
+
+Public:   self.nome      → Sem proteção
+Protected: self._dados    → Para herança
+Private:   self.__seguro  → Máxima proteção
+
+Getter: def obter_X(self):
+Setter: def definir_X(self, valor):
+
+Validar sempre!
+
+==========================================
+Última atualização: 2026-06-16
+Nível: Intermediário
+==========================================

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="javascript.js"></script>
+</head>
+<body>
+    <form>
+        <h3> CALCULANDO O IMC - ÍNDICE DE MASSA CORPORAL </h3>
+        <label for="peso"> Informe o seu peso em quilogramas:</label>
+        <input type ="text" name="peso" id="peso"/>
+        <br/>
+        <label for="altu"> Informe a sua altura em metros</label>
+        <input type="text" name="altu" id="altu"/>
+        <br/>
+        <label for="resu"> O seu IMC é de:</label>
+        <input type="text" name="resu" id ="resu" disabled/>
+        <br/>
+        <input type="buton" onClick="calculo()" value="Calcular"/>
+        <input type="rest" value="Limpar"/>
+    </form>
+</body>
+</html>

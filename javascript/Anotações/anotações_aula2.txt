@@ -1,0 +1,25 @@
+Variaveis no JavaScript
+---
+
+-não associamos um tipo de dados ao criá-las 
+-clausulas para declaração de variáveis:
+
+-const -> criamos uma variável com um valor que não irá mudar 
+conforme a execução da aplicação
+
+const pi + 3.1415;
+pi = 3.1415926 x -> Não perimite modificação
+---
+
+-Let -> criamos uma variável obrigatoriamente
+com um valor inicial, que PODE mudar conforme a exécução da aplicação 
+
+let pi = 3.1415;
+pi = 3.14.15926 -> o valor da variável foi modificado em algum momento da execução 
+---
+
+Var -> características semelhanes á "let", com a diferença que não é obrigato-
+rio declarar com um valor ou seja, pode ser vazia
+
+var pi; / pi= 3.1415926
+var pi= 3.1415;

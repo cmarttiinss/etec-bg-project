@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exercícios JavaScript</title>
+<script src="javascript_aula3.js"></script>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+.escondida{
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+}
+.exibida{
+    visibility: visible;
+    height: auto;
+}
+.pergunta{
+    display: block;
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.seta_inicial{
+    transform: rotate(180deg);
+}
+.seta_final{
+    transform: rotate(0deg);
+}
+</style>
+</head>
+<body>
+
+<form name="formularioSoma">
+    <h2>Somando os valores informados</h2>
+
+    <label for="tnum1">Número 1:</label>
+    <input type="text" name="tnum1" id="tnum1">
+
+    <br><br>
+
+    <label for="tnum2">Número 2:</label>
+    <input type="text" name="tnum2" id="tnum2">
+
+    <br><br>
+
+    <label for="tresu">Resultado:</label>
+    <input type="text" name="tresu" id="tresu">
+
+    <br><br>
+
+    <input type="button" value="Mostrar" onclick="Somar()">
+    <input type="reset" value="Limpar" onclick="Limpar()">
+</form>
+
+<hr>
+
+<form>
+    <h3>Calculando o IMC</h3>
+
+    <label for="peso">Peso (kg):</label>
+    <input type="text" id="peso">
+
+    <br><br>
+
+    <label for="altu">Altura (m):</label>
+    <input type="text" id="altu">
+
+    <br><br>
+
+    <label for="resu">IMC:</label>
+    <input type="text" id="resu" disabled>
+
+    <br><br>
+
+    <input type="button" value="Calcular" onclick="calculo()">
+    <input type="reset" value="Limpar">
+</form>
+
+<hr>
+
+<form>
+    <label>Escolha uma cor:</label>
+
+    <select id="cor" onchange="Troca_cor()">
+        <option value="#ffffff">...</option>
+        <option value="#ff0000">Vermelho</option>
+        <option value="#ffff00">Amarelo</option>
+        <option value="#00ccff">Azul</option>
+        <option value="#005500">Verde</option>
+    </select>
+</form>
+
+<hr>
+
+<h2>FAQ</h2>
+
+<span onclick="Exibe_Resposta('Resp1','bt1')" class="pergunta">
+Vocês vendem a erva do banchá?
+</span>
+<div id="Resp1" class="escondida">
+    Sim, você poderá preparar em casa.
+</div>
+
+<span onclick="Exibe_Resposta('Resp2','bt2')" class="pergunta">
+Vocês fazem outros peixes assados?
+</span>
+<div id="Resp2" class="escondida">
+    Temos anchovas, linguados e outros peixes nobres.
+</div>
+
+<span onclick="Exibe_Resposta('Resp3','bt3')" class="pergunta">
+Palmeiras tem mundial?
+</span>
+<div id="Resp3" class="escondida">
+    Não.
+</div>
+
+<span onclick="Exibe_Resposta('Resp4','bt4')" class="pergunta">
+Qual o time brasileiro com maior torcida?
+</span>
+<div id="Resp4" class="escondida">
+    Flamengo.
+</div>
+
+<span onclick="Exibe_Resposta('Resp5','bt5')" class="pergunta">
+Por que o Mario Bros tem bigode?
+</span>
+<div id="Resp5" class="escondida">
+    Para facilitar o design do personagem.
+</div>
+
+<span onclick="Exibe_Resposta('Resp6','bt6')" class="pergunta">
+Qual a profissão do Mario Bros?
+</span>
+<div id="Resp6" class="escondida">
+    Encanador.
+</div>
+
+<span onclick="Exibe_Resposta('Resp7','bt7')" class="pergunta">
+É benino ou benina?
+</span>
+<div id="Resp7" class="escondida">
+    Naum sou não!
+</div>
+
+</body>
+</html>
+

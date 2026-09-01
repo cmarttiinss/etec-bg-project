@@ -1,0 +1,272 @@
+==========================================
+🌳 HERANÇA
+==========================================
+
+📝 RESUMO RÁPIDO:
+=================
+
+Herança = Uma classe filha herda características de uma classe pai
+Objetivo: Reuso de código e organização hierárquica
+
+---
+
+1️⃣ CONCEITOS BÁSICOS
+====================
+
+Classe Pai (Superclasse):
+  • Define atributos e métodos base
+  • Pode ser herdada por várias filhas
+
+Classe Filha (Subclasse):
+  • Herda de uma ou mais classes pai
+  • Pode adicionar novos atributos/métodos
+  • Pode sobrescrever métodos
+
+Sintaxe:
+  class Animal:  # Classe Pai
+      pass
+  
+  class Cachorro(Animal):  # Classe Filha
+      pass
+
+---
+
+2️⃣ TIPOS DE HERANÇA
+===================
+
+🟡 SIMPLES (Uma filha, Uma mãe):
+  Animal
+    ↑
+    └── Cachorro
+
+  class Animal:
+      def fazer_som(self):
+          return "Som"
+  
+  class Cachorro(Animal):
+      def fazer_som(self):
+          return "Au au!"
+
+---
+
+🟠 MULTINÍVEL (Avó → Mãe → Filha):
+  SerVivo
+    ↑
+    └── Animal
+        ↑
+        └── Cachorro
+
+  class SerVivo:
+      pass
+  
+  class Animal(SerVivo):
+      pass
+  
+  class Cachorro(Animal):
+      pass
+
+---
+
+🟢 MÚLTIPLA (Filha, Múltiplas mães):
+  Terrestre    Aquático
+       \        /
+        \      /
+        Anfíbio
+
+  class Anfíbio(Terrestre, Aquático):
+      pass
+
+⚠️ Pode ficar complexa! Use com cuidado.
+
+---
+
+🔵 HIERÁRQUICA (Múltiplas filhas, Uma mãe):
+           Veiculo
+          /   |   \
+       Carro Moto Bicicleta
+
+  class Veiculo:
+      pass
+  
+  class Carro(Veiculo):
+      pass
+  
+  class Moto(Veiculo):
+      pass
+
+---
+
+3️⃣ MÉTODO SUPER()
+=================
+
+super() acessa métodos e atributos da classe pai
+
+Uso: Chamar __init__ do pai:
+
+class Animal:
+    def __init__(self, nome):
+        self.nome = nome
+
+class Cachorro(Animal):
+    def __init__(self, nome, raca):
+        super().__init__(nome)  # Chama __init__ do pai
+        self.raca = raca
+
+---
+
+Uso: Chamar método do pai:
+
+class Animal:
+    def fazer_som(self):
+        return "Som"
+
+class Cachorro(Animal):
+    def fazer_som(self):
+        som_generico = super().fazer_som()
+        return f"{som_generico}: Au au!"
+
+---
+
+4️⃣ VERIFICAR HERANÇA
+====================
+
+isinstance(objeto, Classe):
+  dog = Cachorro()
+  print(isinstance(dog, Cachorro))  # True
+  print(isinstance(dog, Animal))    # True
+
+Classe.__bases__:
+  print(Cachorro.__bases__)  # (<class 'Animal'>,)
+
+MRO (Method Resolution Order):
+  print(Cachorro.mro())  # Ordem de busca de métodos
+
+---
+
+5️⃣ EXEMPLO COMPLETO
+===================
+
+class Funcionario:
+    def __init__(self, nome, salario):
+        self.nome = nome
+        self._salario = salario
+    
+    def obter_salario(self):
+        return self._salario
+    
+    def trabalhar(self):
+        return f"{self.nome} está trabalhando"
+
+class Gerente(Funcionario):
+    def __init__(self, nome, salario, depto):
+        super().__init__(nome, salario)
+        self.departamento = depto
+    
+    def supervisionar(self):
+        return f"Supervisionando {self.departamento}"
+
+class Desenvolvedor(Funcionario):
+    def __init__(self, nome, salario, linguagem):
+        super().__init__(nome, salario)
+        self.linguagem = linguagem
+    
+    def programar(self):
+        return f"Programando em {self.linguagem}"
+
+---
+
+Uso:
+  func = Funcionario("João", 3000)
+  print(func.trabalhar())
+  
+  gerente = Gerente("Maria", 5000, "TI")
+  print(gerente.supervisionar())
+  print(gerente.trabalhar())  # Herdado
+  
+  dev = Desenvolvedor("Pedro", 4000, "Python")
+  print(dev.programar())
+
+---
+
+6️⃣ SOBRESCRITA (OVERRIDE)
+==========================
+
+Classe filha redefine método da classe pai:
+
+class Animal:
+    def fazer_som(self):
+        return "Som genérico"
+
+class Gato(Animal):
+    def fazer_som(self):  # Sobrescreve
+        return "Miau!"
+
+class Cachorro(Animal):
+    def fazer_som(self):  # Sobrescreve
+        return "Au au!"
+
+---
+
+7️⃣ BOAS PRÁTICAS
+=================
+
+✓ Profundidade máxima: 3-4 níveis
+✓ Use super() para chamar pai
+✓ Documente o motivo da herança
+✓ Evite herança muito profunda
+✓ Cada classe tem responsabilidade única
+✓ Teste cada nível de herança
+
+---
+
+8️⃣ HERANÇA VS COMPOSIÇÃO
+========================
+
+HERANÇA (É um):
+  Cachorro IS-A Animal
+  class Cachorro(Animal):
+      pass
+
+COMPOSIÇÃO (Tem um):
+  Carro HAS-A Motor
+  class Carro:
+      def __init__(self):
+          self.motor = Motor()
+
+Use composição quando herança fica confusa!
+
+---
+
+9️⃣ COMPARAÇÃO COM OUTRAS
+=========================
+
+ESTRUTURADA          ORIENTADA (COM HERANÇA)
+Função               Classe
+Reutilizar           Heredar + Estender
+Código duplicado     Código uma vez
+Sem hierarquia       Hierarquia lógica
+
+---
+
+🔟 RESUMO RÁPIDO
+=================
+
+class Pai:
+    def metodo(self):
+        return "Do pai"
+
+class Filha(Pai):
+    def metodo(self):
+        return super().metodo() + " e do filho"
+
+f = Filha()
+f.metodo()  # Do pai e do filho
+
+Super() = acessa classe pai
+Sobrescrita = redefine método
+Herança = compartilha código
+
+==========================================
+Última atualização: 2026-06-16
+Nível: Intermediário
+==========================================

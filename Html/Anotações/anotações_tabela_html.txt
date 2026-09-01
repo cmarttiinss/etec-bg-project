@@ -1,0 +1,31 @@
+-Tabelas em HTML
+---
+
+Atualmente não é muio utilizada, mas serve apenas para formaar os dados dispostos 
+em linhas e colunas. Porém, sob o ponto de vista de "responsividade" não é aplicável,
+porque a unica opção a ser feita, para ajuse na tela é diminuir as suas dimensões (e não redesenha-la). 
+---
+
+É delimiada pelas tags <table> e </table> e 
+não tem bordas (é preciso instalar pelo css)
+---
+
+<table>
+    <tr>
+        <td> Coluna 1 </td>
+        <td> Coluna 2 </td>
+        <td> Coluna 3 </td>
+    </tr>
+
+    <tr>
+        <td> Coluna 1 </td>
+        <td> Coluna 2 </td>
+        <td> Coluna 3 </td>
+    </tr>
+---
+
+</table>
+td - significa table row -> linha da tabela 
+td - significa table draw -> célula da tabela, onde a informação é colocada
+th - significa table header -> cabeçalho da tabela e, em a mesma função do td, mas 
+já deixa o coneudo em negrito 

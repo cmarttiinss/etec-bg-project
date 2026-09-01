@@ -1,0 +1,17 @@
+Aula/03/ JavaScript
+---
+
+let = document.getEle,emtById("txtnome").value;
+    alert("t").
+    
+document.getElemenById("txtnome").focus();
+---
+
+<form>
+    <input type ="text" id="txtnome" required/>
+</form>
+---
+        auto;
+Height: 0px; 
+visibilit: hidden
+         : visible

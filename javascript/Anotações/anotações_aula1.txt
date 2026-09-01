@@ -1,0 +1,35 @@
+JavaScript BG
+-Linguagem de programação não copilada, ou seja, não cria um arquivo 
+executável(.exe) para "rodar" no sistema.
+---
+
+-Só que criamos:
+
+-Variáveis 
+-Vetores
+-Estruturas
+-if
+-switch
+---
+
+-Estruturas de repetição
+
+-For
+-While
+-funções -> function nome()
+-> Utilizamos referencias de propriedades e metodos
+-> Respeitamos uma regra hierárquica de propriedades e comandos --> DOM do JS
+-> Diferencia maiúscula de minúscula (case sensitivy)
+---
+
+-Pode ser criado 
+
+-> Dentro do HTML
+-> Na parte <HEAD>
+-> Na parte <body>
+
+-Externamente
+
+-> Deve ser salvo como ".js"
+-> Introduzido no HTML:
+-> <script src="arquivo.js"></script>

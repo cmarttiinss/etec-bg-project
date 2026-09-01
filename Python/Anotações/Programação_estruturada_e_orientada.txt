@@ -1,0 +1,129 @@
+==========================================
+📚 PROGRAMAÇÃO ESTRUTURADA E ORIENTADA
+==========================================
+
+📝 RESUMO RÁPIDO:
+================
+
+🔄 Programação Estruturada: Foco em funções e procedimentos lineares
+🏛️ Programação Orientada: Foco em objetos e classes reutilizáveis
+
+---
+
+1️⃣ PROGRAMAÇÃO ESTRUTURADA
+==========================
+
+✨ Características:
+  • Uso de funções e procedimentos
+  • Dados separados de funções
+  • Fluxo linear de execução
+  • Simples e direta
+
+💻 Exemplo:
+  def calcular_imc(peso, altura):
+      return peso / (altura ** 2)
+  
+  peso = 70
+  altura = 1.75
+  resultado = calcular_imc(peso, altura)
+
+✅ Vantagens:
+  ✓ Fácil de aprender
+  ✓ Rápido para programas pequenos
+  ✓ Baixa complexidade
+
+❌ Desvantagens:
+  ✗ Difícil para projetos grandes
+  ✗ Dados vulneráveis (sem proteção)
+  ✗ Reuso limitado de código
+
+---
+
+2️⃣ PROGRAMAÇÃO ORIENTADA A OBJETOS (POO)
+==========================================
+
+✨ Pilares Principais:
+  1. Encapsulamento - Proteção de dados
+  2. Herança - Compartilhamento de características
+  3. Polimorfismo - Múltiplas formas de comportamento
+
+🔑 Conceitos:
+  • Classe: Template para criar objetos
+  • Objeto: Instância de uma classe
+  • Atributo: Dados do objeto
+  • Método: Função dentro do objeto
+
+💻 Exemplo:
+  class Aluno:
+      def __init__(self, nome):
+          self.nome = nome
+          self.notas = []
+      
+      def adicionar_nota(self, nota):
+          self.notas.append(nota)
+      
+      def calcular_media(self):
+          return sum(self.notas) / len(self.notas)
+  
+  aluno = Aluno("João")
+  aluno.adicionar_nota(8.5)
+  aluno.adicionar_nota(9.0)
+  media = aluno.calcular_media()
+
+✅ Vantagens:
+  ✓ Escalável para grandes projetos
+  ✓ Máximo reuso de código
+  ✓ Fácil manutenção e atualização
+  ✓ Proteção de dados sensíveis
+
+❌ Desvantagens:
+  ✗ Maior complexidade inicial
+  ✗ Curva de aprendizado mais íngreme
+
+---
+
+3️⃣ COMPARAÇÃO
+=============
+
+                Estruturada    Orientada
+Foco            Funções        Objetos
+Organização     Modular        Hierárquica
+Dados           Separados      Encapsulados
+Segurança       Baixa          Alta
+Reuso           Limitado       Máximo
+Escalabilidade  Pequena        Grande
+Aprendizado     Fácil          Moderado
+Projetos        Simples        Complexos
+
+---
+
+4️⃣ QUANDO USAR?
+===============
+
+Use Programação Estruturada para:
+  📝 Scripts simples
+  🔧 Utilitários e ferramentas
+  📊 Processamento de dados básico
+  ⚡ Protótipos rápidos
+
+Use Programação Orientada para:
+  🏗️ Aplicações grandes
+  🔄 Código com muito reuso
+  🛡️ Dados sensíveis (segurança)
+  👥 Trabalho em equipe
+  🚀 Projetos de longo prazo
+
+---
+
+5️⃣ BOA PRÁTICA
+===============
+
+✅ Comece com Programação Estruturada (é mais fácil)
+✅ Depois aprenda POO (é a evolução natural)
+✅ Use POO para projetos profissionais
+✅ Python permite os dois paradigmas!
+
+==========================================
+Última atualização: 2026-06-16
+Nível: Iniciante a Intermediário
+==========================================

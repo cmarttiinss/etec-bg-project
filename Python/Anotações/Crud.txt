@@ -1,0 +1,193 @@
+==========================================
+🗄️ CRUD - OPERAÇÕES DE DADOS
+==========================================
+
+📝 RESUMO RÁPIDO:
+=================
+
+CRUD = 4 operações básicas de gerenciamento de dados:
+  C (Create) → Criar/Inserir dados
+  R (Read)   → Ler/Buscar dados
+  U (Update) → Atualizar/Modificar dados
+  D (Delete) → Deletar/Remover dados
+
+---
+
+1️⃣ CREATE (CRIAR)
+=================
+
+🎯 Objetivo: Inserir novos dados no sistema
+
+💻 Exemplos:
+
+Com Listas:
+  lista.append(item)
+  tarefas = []
+  tarefas.append("Estudar Python")
+
+Com Dicionários:
+  dicio['chave'] = valor
+  usuario = {'nome': 'João', 'idade': 25}
+
+Com Banco de Dados:
+  INSERT INTO tabela (coluna) VALUES (valor)
+
+---
+
+2️⃣ READ (LER)
+==============
+
+🎯 Objetivo: Recuperar dados existentes
+
+💻 Exemplos:
+
+Com Listas:
+  lista[0]                    # Acesso por índice
+  for item in lista:          # Iterar
+      print(item)
+
+Com Dicionários:
+  dicio['chave']             # Acessar valor
+  dicio.get('chave')         # Com padrão
+  for k, v in dicio.items(): # Iterar
+
+Com Banco de Dados:
+  SELECT * FROM tabela
+  SELECT * FROM tabela WHERE id = 1
+
+---
+
+3️⃣ UPDATE (ATUALIZAR)
+====================
+
+🎯 Objetivo: Modificar dados existentes
+
+💻 Exemplos:
+
+Com Listas:
+  lista[0] = novo_valor
+
+Com Dicionários:
+  dicio['chave'] = novo_valor
+
+Com Banco de Dados:
+  UPDATE tabela SET coluna = valor WHERE id = 1
+
+---
+
+4️⃣ DELETE (DELETAR)
+===================
+
+🎯 Objetivo: Remover dados
+
+💻 Exemplos:
+
+Com Listas:
+  del lista[0]               # Deletar por índice
+  lista.remove(item)         # Deletar por valor
+  lista.clear()              # Limpar tudo
+
+Com Dicionários:
+  del dicio['chave']         # Deletar chave
+  dicio.pop('chave')         # Deletar com padrão
+
+Com Banco de Dados:
+  DELETE FROM tabela WHERE id = 1
+
+---
+
+5️⃣ EXEMPLO COMPLETO
+===================
+
+Classe GerenciadorTarefas:
+
+class GerenciadorTarefas:
+    def __init__(self):
+        self.tarefas = []
+        self.id = 1
+    
+    # CREATE
+    def criar_tarefa(self, titulo):
+        tarefa = {'id': self.id, 'titulo': titulo, 'feita': False}
+        self.tarefas.append(tarefa)
+        self.id += 1
+        return tarefa
+    
+    # READ
+    def listar_tarefas(self):
+        return self.tarefas
+    
+    def obter_tarefa(self, id):
+        for t in self.tarefas:
+            if t['id'] == id:
+                return t
+        return None
+    
+    # UPDATE
+    def marcar_feita(self, id):
+        tarefa = self.obter_tarefa(id)
+        if tarefa:
+            tarefa['feita'] = True
+    
+    # DELETE
+    def deletar_tarefa(self, id):
+        self.tarefas = [t for t in self.tarefas if t['id'] != id]
+
+---
+
+6️⃣ CONTEXTOS DE USO
+===================
+
+✅ Arquivos (JSON, TXT, CSV)
+✅ Banco de Dados (SQLite, MySQL, PostgreSQL)
+✅ APIs REST (GET, POST, PUT, DELETE)
+✅ Listas e Dicionários (em memória)
+
+---
+
+7️⃣ BOAS PRÁTICAS
+=================
+
+✓ Sempre validar dados antes de criar
+✓ Usar prepared statements (banco de dados)
+✓ Implementar tratamento de erros
+✓ Manter logs de operações
+✓ Fazer backup de dados importantes
+✓ Usar transações para operações críticas
+
+---
+
+8️⃣ PADRÃO RÁPIDO
+=================
+
+# CREATE
+objeto_novo = Classe(parametros)
+lista.append(objeto_novo)
+
+# READ
+item = lista[0]
+item = dicio['chave']
+
+# UPDATE
+lista[0] = novo_item
+dicio['chave'] = novo_valor
+
+# DELETE
+del lista[0]
+del dicio['chave']
+
+---
+
+9️⃣ RESUMO DE OPERAÇÕES
+=======================
+
+Operação    Função              Objetivo
+CREATE      append(), insert()  Adicionar dados
+READ        get(), index()      Recuperar dados
+UPDATE      assignment          Modificar dados
+DELETE      del, remove()       Remover dados
+
+==========================================
+Última atualização: 2026-06-16
+Nível: Iniciante
+==========================================    

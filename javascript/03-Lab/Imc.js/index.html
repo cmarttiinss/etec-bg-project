@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Calculadora de IMC</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="script.js"></script>
+</head>
+<body>
+    <form id="calculadora-form">
+        <div id="IMC">
+            <h1>Calculando o IMC - ÍNDICE DE MASSA CORPORAL -</h1>
+            <label for="peso">Informe seu peso em kilogramas (KG):</label>
+            <input type="number" id="peso" placeholder="Seu Peso (KG)" /><br />
+            <label for="altu">Informe sua altura em metros:</label>
+            <input type="number" id="altu" placeholder="Sua Altura em (MT)" /><br />
+        </div>
+        <div id="button-radio">
+            <h2>Selecione o seu gênero:</h2>
+            <input type="radio" id="masculino" name="genero" value="Masculino" />
+            <label for="masculino">Masculino</label><br />
+            <input type="radio" id="Feminino" name="genero" value="Feminino" />
+            <label for="Feminino">Feminino</label>
+        </div>
+        <div id="resultado">
+            <label for="Yimc">O valor do seu IMC é:</label>
+            <input type="text" id="Yimc" readonly />
+            <input type="text" id="TxtImc" readonly />
+            <label for="PesoId">Seu peso ideal é:</label>
+            <input type="text" id="PesoId" readonly />
+        </div>
+        <div id="botoes">
+            <button type="button" onclick="calculadora()" id="calcular">Calcular</button>
+            <button type="reset" value="Limpar">Limpar</button>
+        </div>
+    </form>
+</body>
+</html>

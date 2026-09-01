@@ -1,0 +1,14 @@
+Intervalo de datas de cada signo:
+
+		Capricornio: de 22 dezembro a 20 janeiro
+		Aquario: de 21 janeiro a 19 fevereiro
+		Peixes: de 20 fevereiro a 20 março	
+		Aries: de 21 marco a 20 abril
+		Touro: de 21 abril a 20 maio
+		Gemeos: de 21 maio a 20 junho
+		Cancer: de 21 junho a 22 julho
+		Leao: de 23 julho a 22 agosto
+		Virgem: de 23 agosto a 22 setembro
+		Libra: de 23 setembro a 22 outubro
+		Escorpiao: de 23 outubro a 21 novembro
+		Sagitario: de 22 novembro a 21 dezembro
