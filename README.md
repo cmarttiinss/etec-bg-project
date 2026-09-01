@@ -55,8 +55,8 @@
 
 | Tecnologia | Nível | Uso |
 |:---:|:---:|:---|
-| 🌐 **HTML** | ⭐⭐⭐⭐ | Estruturação de páginas web |
-| 🎨 **CSS** | ⭐⭐⭐⭐ | Estilização e layout de interfaces |
+| 🌐 **HTML** | ⭐⭐⭐ | Estruturação de páginas web |
+| 🎨 **CSS** | ⭐⭐⭐ | Estilização e layout de interfaces |
 | 🟨 **JavaScript** | ⭐⭐⭐ | Interatividade e lógica front-end |
 | 🐍 **Python** | ⭐⭐⭐ | Automação, scripts e back-end |
 | ⚙️ **C++** | ⭐⭐⭐ | Sistemas embarcados e programação de baixo nível |
