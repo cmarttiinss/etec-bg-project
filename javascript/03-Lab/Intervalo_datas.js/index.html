@@ -13,11 +13,35 @@
             <h1> Dia em que Nasceu ?</h1>
             <label for="data_nasc"> Informe o dia em que nasceu: </label>
             <input type="text" id="data_nasc" placeholder="Dia" required>
+            
             <label for="data_mes"> Informe o mes em que nasceu: </label>
             <input type="text" id="data_mes" placeholder="Mes" required>
+            
             <label for="data_ano"> Informe o ano em que nasceu:</label>
-            <input type="text" id="data_ano" placeholder="Ano" required>     
+            <input type="text" id="data_ano" placeholder="Ano" required> 
+
         </div>
+    </form>
+    <form>
+        <div>
+            <label for="nome_mes"> Seu mes de nascimento: </label>
+            <input type="text" id="nome_mes" readonly><br>
+            
+            <label for="dia_semana"> Seu dia da semana foi: </label>
+            <input type="text" id="dia_semana" readonly> <br><br> 
+            
+            <label for="signo_mes"> Seu signo é: </label>
+            <input type="text" id="signoimg" readonly> <br><br> 
+
+            <label for="idade"> E a sua idade é: </label>
+            <input type="text" id="idade" readonly> <br><br> 
+        </div>
+    </form>
+    <form id="buttonsection"> 
+        <div id="resultado">
+            <button type="reset">Limpar</button>
+            <button type="button" id="resultad"> C </button>
+3        </div>
     </form>
 </body>
 </html>

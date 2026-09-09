@@ -1,0 +1,33 @@
+PWII - 09/09/2026 
+---
+
+Revisão Arrays no JS 
+-Outras referencias:
+- arranjo 
+- matriz 
+- vetor
+
+Proporciona armazenamento temporário de dados,
+em um tipo de variável subdividida em compartimentos (elementos)
+referenciados por um valor numérico inteiro positivo (índice). asua função principal é a economia 
+de linhas de codigo que ela proporciona, dependendo da sintaxe proposta. 
+
+- Todo 1 elemento de um array é referenciado pelo índice 0. O 2 elemento,
+pelo índice 1 e assim sucessivamente. 
+---
+
+
+Várias formas de criar um array no JS:
+
+a| Usando o construtor new Array()
+- Dinâmico 
+    var nome = new Array();
+
+- Pré definida quantidade de elementos...
+    var nome = new Array(3);
+
+- Pré definida tanto a qtde quanto o valor armazenado em cada elemento...
+    var nome =  new Array("homem", "mulher", "intersexo");
+
+b| Direto na declaração da variavel, semm o construtor
+    var nome= ["homem", "mulher", "intersexo"];
