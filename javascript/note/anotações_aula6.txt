@@ -1,0 +1,25 @@
+Uso das funções di JS: 
+---
+
+-setInterval("função", tempo); => de quanto em quanto tempo a função vai se repetir
+                | 
+            nome da função
+            criada por voce 
+
+---
+
+-Exemplo da sintaxe: 
+var repete = setInterval("Mostra(),2000");
+A variável "repete", inicia o looping da chamada à function
+"mostra()" a cada 2s 
+
+-clearInterval(variável);
+                   |
+            variável que iniciou o looping 
+
+=> Exemplo da sintaxe:
+
+clearInterval (repete);
+                  |
+            variável usada no exemplo da ativação
+            do looping 
