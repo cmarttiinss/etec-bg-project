@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data e Hora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="card">
+        <h2>Relógio de Data e Hora</h2>
+        <p class="subtitulo">
+            Descubra a data e hora atual do computador
+        </p>
+
+        <div class="conteudo">
+            <div class="campo">
+                <label>Data Atual</label>
+                <div class="inputs">
+                    <input type="text" id="dia" readonly>
+                    <span>/</span>
+                    <input type="text" id="mes" readonly>
+                    <span>/</span>
+                    <input type="text" id="ano" readonly>
+                </div>
+            </div>
+            <div class="campo">
+                <label>Nome do Mês</label>
+                <input type="text" id="nomeMes" class="campo-grande" readonly>
+            </div>
+            <div class="campo">
+                <label>Hora Atual</label>
+                <div class="inputs">
+                    <input type="text" id="hora" readonly>
+                    <span>:</span>
+                    <input type="text" id="minuto" readonly>
+                    <span>:</span>
+                    <input type="text" id="segundo" readonly>
+                </div>
+            </div>
+            <div class="campo">
+                <label>Dia da Semana</label>
+                <input type="text" id="diaSemana" class="campo-grande" readonly>
+            </div>
+        </div>
+        <div class="botoes">
+            <button id="exibir">Exibir</button>
+            <button id="parar">Parar Relógio</button>
+            <button id="limpar">Limpar</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>
