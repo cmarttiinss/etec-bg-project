@@ -1,0 +1,131 @@
+Revisão P/ Prova 
+---
+
+Orientações a Objetos (O.O)
+    Novo [Paradigma] de programação 
+-> Estrutura o sistema através de classes
+
+-> Pilares da O.O. 
+    -*ABSTRAÇÃO*
+    -*ENCAPSULAMENTO*
+    -*HERANÇA*
+    -*POLIMORFISMO*
+
+1- ABSTRAÇÃO 
+-> Modelar "coisas do mundo real através de classes"
+
+-> *Classes*
+    Atributos: Características
+    -> Semelhante variável declarada na classe
+    e não em um método 
+    -> Late -> Atrib. Inicializado depois;
+
+    Métodos: Comportamentos(Ações)
+        void sacar (double valor) -> Parâmetro: O que o Método Recebe
+        {
+            corpo;
+        } 
+
+Exemplo: Class èars {
+    int Nivel= 1;
+    late int forca; 
+
+    2lacar (Pers init) {
+        int dano = forca - ini.def;
+    }
+}
+---
+
+Main: 
+    Conta c1 = Conta;
+          |
+          -> Instância (Objeto)
+                |
+                -> de Conta
+
+C1.titular= "João"
+c1.Sacar(40);
+
+Conta . titular= "Ana" x Atributos e metodos
+                                  |
+                                  -> São Acessados pela instância
+                                  
+---
+
+2- Encapsulamento 
+
+Proteger: usar a classe de forma correta
+
+* Modificador de acesso;
+    public: padrão
+    private: _atributo
+
+* Construtor
+    Método especial chamado automatic
+    Quando a classe é instanciada
+    Padrão: Obrigatório
+            POsicional(Ordem)
+-----------------------------------------
+    Nomeado: Opcional
+            N de ordem 
+    {}
+
+Exemplo: 
+    Main:
+    Conta c1 = conta;
+    c1.saldo = 1000000; X private;
+
+    Conta {
+        _Saldo
+        |
+        -> Underscore
+                |
+                -> Private: Acessar dentro do propio arquivo
+        Sacar()
+        saldo ok
+    }
+
+Exemplo 2:                                  -> Valor Padrão 
+    Conta {                                 |
+        Conta(This.titular, this.Ag, {this;limite=0})
+        Print ("OI");
+    }
+---
+
+3/4 - Herança e Polimorfismo 
+
+    (Vida)  [PEARS] -> Mae ou Super
+      | 
+    Socar 
+
+    [Mago]  [Barbaro] [Curandeiro]
+      ok       |            |       Herança Mult;
+    [magoGelo] ---------> [B.C]           X
+
+- Classe tem o atrib. e mel que 
+são herdados p/ as filhas
+
+    - Mnos codigo
+    -Menos Manutenção
+---
+
+Reescrita(Override)
+    
+                  [Pers]
+                  ------
+                  [Soco]
+          ->         ^           <-
+          |          |            |
+       [Mago]     [Barbaro]     [Boss] 
+---
+
+Classe Abstrata 
+|
+|
+-> Não Pode ser instanciado 
+|
+-> Salva como Base p/Filhas
+
+Métodos Abstrato
+|
+-> *Tem que ser reescrito 
