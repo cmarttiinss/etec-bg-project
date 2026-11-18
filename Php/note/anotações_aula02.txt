@@ -1,0 +1,16 @@
+conexao.php
+---
+
+<?php 
+    $servidor="localhost";
+    $banco="dbteste";
+    $usuario="root";
+    $senha="12345678";              [Ponto e vírgula]            [Vírgula]                 
+    $porta="3305";                    |           |              |        |
+    $cmd= newPDO("mysql:host=$servidor;port=$porta;dbname=$banco",$usuario,$senha);
+                                            |
+                                            |
+                                ------------|-------------
+                                |   Forçando o PHP       |
+                                |   rodar na porta 3305  |
+                                --------------------------
