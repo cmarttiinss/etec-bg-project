@@ -1,0 +1,15 @@
+/* CRIANDO BANCO DE DADOS */
+CREATE DATABASE dbteste;
+
+/* DEIXANDO O BANCO PARA USO */
+USE dbteste;
+
+/* CRIANDO TABELA PARA O BANCO DE DADOS */
+CREATE TABLE tbteste (
+    codi_t INT PRIMARY KEY AUTO_INCREMENT, 
+    nome_t VARCHAR(100) NOT NULL,
+    emai_t VARCHAR(40) NOT NULL,
+    senh_t VARCHAR(40) NOT NULL,
+    sexo_t VARCHAR(1), 
+    dtna_t DATE
+);

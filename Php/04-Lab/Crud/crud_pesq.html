@@ -1,0 +1,20 @@
+<!doctype HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Pesquisar Registros</title>
+        <link rel="stylesheet" type="text/css" href="/Php/04-Lab/Crud/css/style3.css"/>
+	</head>
+	<body>
+        <h1>Pesquisar Registros</h1>
+        <hr/>
+		<form name="form1" method="post" action="pesq.php">
+			<label for="txtnome">Insira o todo ou parte do nome a pesquisar: </label>
+            <input type="text" name="txtnome" id="txtnome" maxlength=40 />
+		    <br/><br/>
+            <input type="submit" value="Pesquisar" />
+            <input type="reset" value="Limpar" onClick="document.getElementById('txtnome').focus()" />
+            <input type="button" value="Menu" onClick="location.href='index.html'" />
+		</form>
+	</body>
+</html>

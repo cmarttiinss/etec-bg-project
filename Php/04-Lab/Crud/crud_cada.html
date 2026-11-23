@@ -1,0 +1,35 @@
+<!doctype HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="author" content="Sandra Linda"/>
+		<meta name="viewport" content="width=device-width;height=device-height;initial-scale=1.0"/>
+		<link rel="stylesheet" type="text/css" href="/Php/04-Lab/Crud/css/style2.css"/>
+        <title>Cadastro</title>
+	</head>
+	<body>
+        <h1>Cadastrar Registros</h1>
+        <hr/>
+		<form method="post" action="cada.php">
+		    <label for="txtnome">Nome: </label>
+            <input type="text" name="txtnome" id="txtnome" maxlength=40 required />
+		    <br/><br/>
+            <label for="txtemail">E-mail:</label>
+            <input type="email" name="txtemail" id="txtemail" maxlength=40 required />
+            <br/><br/>
+            <label for="txtsenha">Senha:</label>
+            <input type="password" name="txtsenha" id="txtsenha" maxlength=8 required/>
+            <br/><br/>
+            <label for="txtsexo">Sexo: </label>
+            <input type="radio" value="F" name="txtsexo" id="txtsexof" checked/>Feminino
+		    <input type="radio" value="M" name="txtsexo" id="txtsexom"/>Masculino
+            <br/><br/>
+            <label for="txtdata">Data:</label>
+            <input type="date" name="txtdata" id="txtdata" />
+            <br/><br/><br/>
+            <input type="submit" value="Cadastrar"/>
+            <input type="reset" value="Limpar" onClick="document.getElementById('txtnome').focus();" />
+            <input type="button" value="Menu" onClick="location.href='index.html'"/>
+		</form>
+	</body>
+</html>
